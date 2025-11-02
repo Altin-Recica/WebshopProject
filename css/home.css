@@ -1,0 +1,25 @@
+.home-grid{
+    display: grid; /* pagina layout in een grid gestoken */
+    grid-template-areas: 'gAside gMain'; /* main en aside als areas */
+}
+
+.home-grid main{
+    grid-area: gMain;
+    padding: 1em;
+}
+
+.home-grid main p{
+    padding: 1em 1em 1em 2em;
+}
+
+.home-grid main blockquote{
+    padding: 1em 1em 1em 2em;
+}
+
+.home-grid aside{
+    grid-area: gAside;
+    
+}
+img{
+    border: 1px black solid;
+}

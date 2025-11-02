@@ -1,0 +1,36 @@
+.alles{
+    text-align: center;
+    margin: 2em 0 0 20em;
+}
+
+.productFiche{
+    font-size: 1.5em;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+div{
+    font-size: 20px;
+    margin: 3em;
+    text-decoration: none;
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+
+main div #orderNr{
+    margin-bottom: 1em;
+}
+
+main div #prijs{
+    margin-top: 2.5em;
+}
+
+main div .section{
+    margin: 0.5em 0 0.5em 0;
+}
+

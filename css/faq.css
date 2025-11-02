@@ -1,0 +1,29 @@
+details {
+    margin: 1rem auto;
+    width: 50em;
+    max-width: calc(100% - 2rem);
+    position: relative;
+    border: 1px solid #78909C;
+    border-radius: 6px;
+    background-color: #ECEFF1;
+    transition: background-color .15s;
+}
+
+p{
+    padding: 1em 1em 1em 1em;
+}
+
+h2{
+    padding: 1em;
+    text-align: center;
+    font-size: 2em;
+}
+
+summary {
+    padding: 1rem 2em 1rem 1em;
+    display: block;
+    position: relative;
+    font-size: 1.33em;
+    font-weight: bold;
+    cursor: pointer;
+}

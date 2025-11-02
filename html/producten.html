@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Producten</title>
+    <link rel="stylesheet" href="../css/producten.css">
+    <link rel="stylesheet" href="../css/site.css">
+    <script src="../script/dyn_data.js" defer></script>
+    <script src="../script/producten.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="hiddenItems">Home</h1> 
+        <nav class="navbar">
+            <h2 class="hiddenItems">navbar</h2> 
+            <img src="../media/logo.png" alt="X" class="logo">
+            <ul class="menu">
+                <li><a href="../index.html" id="colorlink">Home</a></li>
+                <li class="producten" id="currentTab"><a href="producten.html">Producten</a>
+                    <ul class="submenu">
+                        <li><a href="producten.html">Heren</a></li>
+                        <li><a href="producten.html">Dames</a></li>
+                        <li><a href="producten.html">Kinderen</a></li>
+                    </ul>
+                </li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Personalisering.html">Personalisering</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="pd-grid">
+        <input type="radio" name="kleur" id="kAlles" checked="checked">
+        <input type="radio" name="kleur" id="kZwart">
+        <input type="radio" name="kleur" id="kRood">
+        <input type="radio" name="kleur" id="kBlauw">
+        <input type="radio" name="kleur" id="kGroen">
+        <input type="radio" name="kleur" id="kWit">
+        <input type="radio" name="kleur" id="kGrijs">
+        <input type="radio" name="kleur" id="kPaars">
+        <input type="radio" name="kleur" id="kRoos">
+        <input type="radio" name="kleur" id="kGeel">
+        <input type="radio" name="kleur" id="kOranje">
+        <aside>
+            <h2 class="hiddenItems">Filter:</h2>
+            <section>
+                <h3>Zoeken</h3>
+                <input id="searchbar" type="text" name="search" placeholder="Zoek naar een product...">
+            </section>
+            <article><h3 class="title2">Sorteer: </h3></article>
+            <section class="sNaam">
+                <h3>Naam</h3>
+                <div class="container">
+                    <input type="radio" name="sorteer" id="nOplopend" checked="checked">
+                    <label for="nOplopend">A -> Z</label>
+                </div>
+                <div class="container">
+                    <input type="radio" name="sorteer" id="nAflopend">
+                    <label for="nAflopend">Z -> A</label>
+                </div>
+            </section>
+
+            <section class="sPrijs">
+                <h3>Prijs</h3>
+                <div class="container">
+                    <input type="radio" name="sorteer" id="pOplopend">
+                    <label for="pOplopend">Oplopend</label>
+                </div>
+                <div class="container">
+                    <input type="radio" name="sorteer" id="pAflopend">
+                    <label for="pAflopend">Aflopend</label>
+                </div>
+            </section>
+            <article><h3 class="title2">Filter: </h3></article>
+
+            <section class="fPrijs">
+                <h3>Prijs</h3>
+                <div class="container">
+                    <input type="radio" name="prijs" id="pAlles" checked="checked">
+                    <label for="pAlles" id="lblpAlles">Alles</label>
+                </div>
+                <div class="container">
+                    <input type="radio" name="prijs" id="pLaag">
+                    <label for="pLaag" id="lblLaag">10.00&euro; - 14.99&euro;</label>
+                </div>
+                <div class="container">
+                    <input type="radio" name="prijs" id="pMid">
+                    <label for="pMid" id="lblMid">15.00&euro; - 17.99&euro;</label>
+                </div>
+                <div class="container">
+                    <input type="radio" name="prijs" id="pHoog">
+                    <label for="pHoog" id="lblHoog">18.00&euro; - 20.00&euro;</label>
+                </div>
+
+            </section>
+
+            <section class="fKleur">
+                <h3>Kleur</h3>
+                <div class="container">
+                    <label for="kAlles" id="lblAlles">Alles</label>
+                </div>
+                <div class="container">
+                    <label for="kZwart" id="lblZwart">Zwart</label>
+                </div>
+                <div class="container">
+                    <label for="kRood" id="lblRood">Rood</label>
+                </div>
+                <div class="container">
+                    <label for="kBlauw" id="lblBlauw">Blauw</label>
+                </div>
+                <div class="container">
+                    <label for="kGroen" id="lblGroen">Groen</label>
+                </div>
+                <div class="container">
+                    <label for="kWit" id="lblWit">Wit</label>
+                </div>
+                <div class="container">
+                    <label for="kGrijs" id="lblGrijs">Grijs</label>
+                </div>
+                <div class="container">
+                    <label for="kPaars" id="lblPaars">Paars</label>
+                </div>
+                <div class="container">
+                    <label for="kRoos" id="lblRoos">Roos</label>
+                </div>
+                <div class="container">
+                    <label for="kGeel" id="lblGeel">Geel</label>
+                </div>
+                <div class="container">
+                    <label for="kOranje" id="lblOranje">Oranje</label>
+                </div>
+            </section>
+        </aside>
+
+
+        <main class="producten-grid">
+            <article id="productList"><h2 class="hiddenItems">productenfilterensortering</h2></article>
+            <article class="herenProducten">
+                <h2>Heren</h2>
+                <a href="detailpaginas/herenZwartDetails.html" data-filter="Zwart">
+                    <img src="/media/producten/herenZwart.png" alt="X">
+                    <p class="naam">Heren T-Shirt Zwart</p>
+                    <p class="prijs">Prijs: 19.99&euro;</p>
+                </a>
+                <a href="detailpaginas/herenBlauwDetails.html" data-filter="Blauw">
+                    <img src="/media/producten/herenBlauw.png" alt="X">
+                    <p class="naam">Heren T-Shirt Blauw</p>
+                    <p class="prijs">Prijs: 17.99&euro;</p>
+                </a>
+                <a href="detailpaginas/herenGrijsDetails.html" data-filter="Grijs">
+                    <img src="/media/producten/herenGrijs.png" alt="X">
+                    <p class="naam">Heren T-Shirt Grijs</p>
+                    <p class="prijs">Prijs: 18.99&euro;</p>
+                </a>
+                <a href=""  data-filter="Groen">
+                    <img src="/media/producten/herenGroen.png" alt="X">
+                    <p class="naam">Heren T-Shirt Groen</p>
+                    <p class="prijs">Prijs: 17.99&euro;</p>
+                </a>
+                <a href="" data-filter="Paars">
+                    <img src="/media/producten/herenPaars.png" alt="X" >
+                    <p class="naam">Heren T-Shirt Paars</p>
+                    <p class="prijs">Prijs: 17.99&euro;</p>
+                </a>
+                <a href="" data-filter="Rood">
+                    <img src="/media/producten/herenRood.png" alt="X">
+                    <p class="naam">Heren T-Shirt Rood</p>
+                    <p class="prijs">Prijs: 19.99&euro;</p>
+                </a>
+                <a href="" data-filter="Wit">
+                    <img src="/media/producten/herenWit.png" alt="X">
+                    <p class="naam">Heren T-Shirt Wit</p>
+                    <p class="prijs">Prijs: 17.50&euro;</p>
+                </a>
+
+            </article>
+
+            <article class="damesProducten">
+                <h2>Dames</h2>
+                <a href="" data-filter="Blauw">
+                    <img src="/media/producten/damesBlauw.png" alt="X">
+                    <p class="naam">Dames T-Shirt Blauw</p>
+                    <p class="prijs">Prijs: 18.99&euro;</p>
+                </a>
+                <a href="" data-filter="Rood">
+                    <img src="/media/producten/damesRood.png" alt="X">
+                    <p class="naam">Dames T-Shirt Rood</p>
+                    <p class="prijs">Prijs: 17.50&euro;</p>
+                </a>
+                <a href="" data-filter="Groen">
+                    <img src="/media/producten/damesGroen.png" alt="X">
+                    <p class="naam">Dames T-Shirt Groen</p>
+                    <p class="prijs">Prijs: 16.99&euro;</p>
+                </a>
+                <a href="" data-filter="Paars">
+                    <img src="/media/producten/damesPaars.png" alt="X">
+                    <p class="naam">Dames T-Shirt Paars</p>
+                    <p class="prijs">Prijs: 18.99&euro;</p>
+                </a>
+                <a href="" data-filter="Roos">
+                    <img src="/media/producten/damesRoos.png" alt="X">
+                    <p class="naam">Dames T-Shirt Roos</p>
+                    <p class="prijs">Prijs: 19.99&euro;</p>
+                </a>
+                <a href="" data-filter="Wit">
+                    <img src="/media/producten/damesWit.png" alt="X">
+                    <p class="naam">Dames T-Shirt Wit</p>
+                    <p class="prijs">Prijs: 19.99&euro;</p>
+                </a>
+                <a href="" data-filter="Geel">
+                    <img src="/media/producten/damesGeel.png" alt="X">
+                    <p class="naam">Dames T-Shirt Geel</p>
+                    <p class="prijs">Prijs: 18.99&euro;</p>
+                </a>
+            </article>
+
+            <article class="kinderenProducten">
+                <h2>Kinderen</h2>
+                <a href="" data-filter="Zwart">
+                    <img src="/media/producten/kinderenZwart.png" alt="X">
+                    <p class="naam">Kinderen T-Shirt Zwart</p>
+                    <p class="prijs">Prijs: 12.99&euro;</p>
+                </a>
+                <a href="" data-filter="Rood">
+                    <img src="/media/producten/kinderenRood.png" alt="X">
+                    <p class="naam">Kinderen T-Shirt Rood</p>
+                    <p class="prijs">Prijs: 11.99&euro;</p>
+                </a>
+                <a href="" data-filter="Groen">
+                    <img src="/media/producten/kinderenGroen.png" alt="X">
+                    <p class="naam">Kinderen T-Shirt Groen</p>
+                    <p class="prijs">Prijs: 10.49&euro;</p>s
+                </a>
+                <a href="" data-filter="Wit">
+                    <img src="/media/producten/kinderenWit.png" alt="X">
+                    <p class="naam">Kinderen T-Shirt Wit</p>
+                    <p class="prijs">Prijs: 11.99&euro;</p>
+                </a>
+                <a href="" data-filter="Oranje">
+                    <img src="/media/producten/kinderenOranje.png" alt="X">
+                    <p class="naam">Kinderen T-Shirt Oranje</p>
+                    <p class="prijs">Prijs: 9.99&euro;</p>
+                </a>
+                <a href="" data-filter="Blauw">
+                    <img src="/media/producten/kinderenBlauw.png" alt="X" data-filter="blauw">
+                    <p class="naam">Kinderen T-Shirt Blauw</p>
+                    <p class="prijs">Prijs: 13.99&euro;</p>
+                </a>
+            </article>
+
+
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.cGrid{
+    display: grid; /* pagina layout in een grid gestoken */
+    grid-template-areas: 'gMain gAside'; /* info links map rechts */
+    margin: 2em;
+}
+
+.cGrid main{
+    grid-area: gMain;
+    font-size: 1.373em;
+}
+
+.cGrid main h2{
+    padding-bottom: 1em;
+}
+
+.cGrid aside{
+    grid-area: gAside;
+}

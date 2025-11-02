@@ -1,0 +1,134 @@
+.pd-grid{
+    display: grid;  /* pagina layout in een grid gestoken */
+    grid-template-areas: 'gAside gMain'; /* 2 grid area voor de main en aside */
+    grid-template-columns: 15% 85%;
+}
+
+.pd-grid aside{
+    grid-area: gAside;
+    margin: 1em;
+}
+
+.pd-grid main{
+    grid-area: gMain;
+    text-align: center;
+}
+
+.pd-grid main h2{
+    text-align: center;
+    padding: 0.5em 1em 1em 1em;
+}
+
+.pd-grid main .naam{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+.pd-grid main .prijs{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+
+.producten-grid{
+    display: grid; /* producten in een grid gestoken */
+    grid-template-areas: 'gHeren gDames gKinderen'; /* 3 grid areas zodat ik de producten categorien naast elkaar kan zetten */
+}
+
+.producten-grid section{
+    padding: 0 1em 1em 1em;
+}
+
+.producten-grid .herenProducten{
+    grid-area: gHeren;
+}
+
+.producten-grid .damesProducten{
+    grid-area: gDames;
+}
+
+.producten-grid .kinderenProducten{
+    grid-area: gKinderen;
+}
+
+.container {
+    padding: 0.5em 0 0 1em;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.fKleur{
+    margin-top: 1em;
+}
+
+main a{
+    display: none;
+}
+
+input{
+    display : none;
+}
+
+#searchbar {
+    display: initial;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#pHoog, #pMid, #pLaag, #nOplopend, #nAflopend, #pOplopend, #pAflopend, #pAlles{
+    display: initial;
+}
+
+.title2{
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1.5em;
+}
+
+.sNaam{
+    margin-bottom: 1em;
+}
+
+.sPrijs{
+    margin-bottom: 2em;
+}
+
+input#kAlles:checked ~ aside label#lblAlles,
+input#kZwart:checked ~ aside label#lblZwart,
+input#kRood:checked ~ aside label#lblRood,
+input#kBlauw:checked ~ aside label#lblBlauw,
+input#kGroen:checked ~ aside label#lblGroen,
+input#kWit:checked ~ aside label#lblWit,
+input#kGrijs:checked ~ aside label#lblGrijs,
+input#kPaars:checked ~ aside label#lblPaars,
+input#kRoos:checked ~ aside label#lblRoos,
+input#kGeel:checked ~ aside label#lblGeel,
+input#kOranje:checked ~ aside label#lblOranje{
+    color: blue;
+}
+
+input#kAlles:checked ~ main a{
+    display: initial;
+}
+
+
+input#kZwart:checked ~ main a[data-filter="Zwart"],
+input#kRood:checked ~ main a[data-filter="Rood"],
+input#kBlauw:checked ~ main a[data-filter="Blauw"],
+input#kGroen:checked ~ main a[data-filter="Groen"],
+input#kWit:checked ~ main a[data-filter="Wit"],
+input#kGrijs:checked ~ main a[data-filter="Grijs"],
+input#kPaars:checked ~ main a[data-filter="Paars"],
+input#kRoos:checked ~ main a[data-filter="Roos"],
+input#kGeel:checked ~ main a[data-filter="Geel"],
+input#kOranje:checked ~ main a[data-filter="Oranje"]{
+    display: initial;
+}
+

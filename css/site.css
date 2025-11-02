@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia , serif;
+    text-decoration: none;
+}
+
+a{
+    color: inherit;
+}
+
+#currentTab{
+    color: blue;
+}
+/* dit is om de titels te verbergen van canvas position absoluut maken en het uit de beeld halen door left -10000 */
+.hiddenItems{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+}
+/* hele navbar op een rij dus de menu en de logo */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px black solid;
+    background-color: #10BBB3;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navbar .logo{
+    width:4em; 
+    height:3em;
+}
+/* menu items op een rij links naar rechts in plaats van boven naar beneden */
+.menu {
+    display: flex; 
+    gap: 1em;
+    font-size: 18px;
+}
+
+header ul{
+    list-style-type: none;
+}
+/* beweegt relatief van zijn normale positie */
+.producten{
+    position: relative; 
+}
+
+.submenu li{
+    padding: 0.5em;
+    border: 1px black solid;
+}
+
+.submenu{
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    border-radius: 5px;
+    position: absolute; /* om de submenu te positioneren waar ik dat wil hebben */
+    display: none; /* sub menu onzichtbaar maken */
+}
+
+.submenu li:hover{
+    background-color: #10BBB3;
+    color: white;
+    transition: 0.3s ease; /* de submenu button gaan van kleur veranderen met een transitie */
+}
+
+.producten:hover .submenu {
+    display: block; /* submenu laten zien als gebruiker hoverd ove de producten menu item */
+}

@@ -1,0 +1,24 @@
+.hzd-grid{
+    display: grid; /* grid van de pagina layout*/
+    grid-template-areas: 'gFoto gInfo'; /* foto links en info rechts van de pagina */
+}
+
+.hzd-grid .foto{
+    padding: 2em 0 2em 2em;
+    grid-area: gFoto;
+    
+}
+
+
+.hzd-grid .info{
+    padding: 1em 0 2em 2em;
+    grid-area: gInfo;
+}
+
+.hzd-grid .info h2{
+    font-size: 2em;
+}
+
+.hzd-grid .info .kenmerken{
+    padding-top: 25em;
+}
